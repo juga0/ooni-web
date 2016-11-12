@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.1 documentation" href="../index.html"/>
         <link rel="next" title="Test Templates" href="ooni.templates.html"/>
         <link rel="prev" title="ooni.nettests third_party Package" href="../nettests/ooni.nettests.third_party.html"/> 
@@ -88,11 +91,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../reports.html">Reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reports.html#report-format-version-changelog">Report format version changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nettests/modules.html">Implemented NetTests</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Measurement Developer API</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Measurement Developer API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#nettest-module"><code class="docutils literal"><span class="pre">nettest</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ooni.settings"><code class="docutils literal"><span class="pre">settings</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oonicli-module"><code class="docutils literal"><span class="pre">oonicli</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reporter-module"><code class="docutils literal"><span class="pre">reporter</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ooni.reporter"><code class="docutils literal"><span class="pre">reporter</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ooni.templates.html">Test Templates</a></li>
 </ul>
@@ -124,7 +127,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -267,8 +270,300 @@ use the ooni_home.</p>
 <div class="section" id="oonicli-module">
 <h2><code class="xref py py-mod docutils literal"><span class="pre">oonicli</span></code> Module<a class="headerlink" href="#oonicli-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="reporter-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">reporter</span></code> Module<a class="headerlink" href="#reporter-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ooni.reporter">
+<span id="reporter-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">reporter</span></code> Module<a class="headerlink" href="#module-ooni.reporter" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ooni.reporter.NJSONReporter">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">NJSONReporter</code><span class="sig-paren">(</span><em>test_details</em>, <em>report_filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#NJSONReporter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.NJSONReporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ooni.reporter.OReporter" title="ooni.reporter.OReporter"><code class="xref py py-class docutils literal"><span class="pre">ooni.reporter.OReporter</span></code></a></p>
+<dl class="docutils">
+<dt>report_destination:</dt>
+<dd>the destination directory of the report</dd>
+</dl>
+<dl class="method">
+<dt id="ooni.reporter.NJSONReporter.createReport">
+<code class="descname">createReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#NJSONReporter.createReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.NJSONReporter.createReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.NJSONReporter.finish">
+<code class="descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#NJSONReporter.finish"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.NJSONReporter.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.NJSONReporter.writeReportEntry">
+<code class="descname">writeReportEntry</code><span class="sig-paren">(</span><em>entry</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#NJSONReporter.writeReportEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.NJSONReporter.writeReportEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="ooni.reporter.NoReportLog">
+<em class="property">exception </em><code class="descclassname">ooni.reporter.</code><code class="descname">NoReportLog</code><a class="reference internal" href="../_modules/ooni/reporter.html#NoReportLog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.NoReportLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.OONIBReportLog">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">OONIBReportLog</code><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Used to keep track of report creation on a collector backend.</p>
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.closed">
+<code class="descname">closed</code><span class="sig-paren">(</span><em>measurement_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.closed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.closed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.created">
+<code class="descname">created</code><span class="sig-paren">(</span><em>measurement_id</em>, <em>collector_settings</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.created"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.creation_failed">
+<code class="descname">creation_failed</code><span class="sig-paren">(</span><em>measurement_id</em>, <em>collector_settings</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.creation_failed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.creation_failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.get_in_progress">
+<code class="descname">get_in_progress</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.get_in_progress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.get_in_progress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.get_incomplete">
+<code class="descname">get_incomplete</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.get_incomplete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.get_incomplete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.get_report_log">
+<code class="descname">get_report_log</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.get_report_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.get_report_log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.get_report_log_entries">
+<code class="descname">get_report_log_entries</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.get_report_log_entries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.get_report_log_entries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.get_to_upload">
+<code class="descname">get_to_upload</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.get_to_upload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.get_to_upload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.incomplete">
+<code class="descname">incomplete</code><span class="sig-paren">(</span><em>measurement_id</em>, <em>collector_settings</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.incomplete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.incomplete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.not_created">
+<code class="descname">not_created</code><span class="sig-paren">(</span><em>measurement_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.not_created"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.not_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.remove_log">
+<code class="descname">remove_log</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.remove_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.remove_log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReportLog.update_log">
+<code class="descname">update_log</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReportLog.update_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReportLog.update_log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.OONIBReporter">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">OONIBReporter</code><span class="sig-paren">(</span><em>test_details</em>, <em>collector_client</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReporter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ooni.reporter.OReporter" title="ooni.reporter.OReporter"><code class="xref py py-class docutils literal"><span class="pre">ooni.reporter.OReporter</span></code></a></p>
+<dl class="method">
+<dt id="ooni.reporter.OONIBReporter.createReport">
+<code class="descname">createReport</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReporter.createReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReporter.createReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a report on the oonib collector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReporter.finish">
+<code class="descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReporter.finish"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReporter.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReporter.serializeEntry">
+<code class="descname">serializeEntry</code><span class="sig-paren">(</span><em>entry</em>, <em>serialisation_format='yaml'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReporter.serializeEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReporter.serializeEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OONIBReporter.writeReportEntry">
+<code class="descname">writeReportEntry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OONIBReporter.writeReportEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OONIBReporter.writeReportEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.OReporter">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">OReporter</code><span class="sig-paren">(</span><em>test_details</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OReporter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OReporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ooni.reporter.OReporter.createReport">
+<code class="descname">createReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OReporter.createReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OReporter.createReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override this with your own logic to implement tests.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OReporter.finish">
+<code class="descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OReporter.finish"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OReporter.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OReporter.writeReportEntry">
+<code class="descname">writeReportEntry</code><span class="sig-paren">(</span><em>entry</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OReporter.writeReportEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OReporter.writeReportEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes as input an entry and writes a report for it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.OSafeDumper">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">OSafeDumper</code><span class="sig-paren">(</span><em>stream</em>, <em>default_style=None</em>, <em>default_flow_style=None</em>, <em>canonical=None</em>, <em>indent=None</em>, <em>width=None</em>, <em>allow_unicode=None</em>, <em>line_break=None</em>, <em>encoding=None</em>, <em>explicit_start=None</em>, <em>explicit_end=None</em>, <em>version=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OSafeDumper"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OSafeDumper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">yaml.emitter.Emitter</span></code>, <code class="xref py py-class docutils literal"><span class="pre">yaml.serializer.Serializer</span></code>, <a class="reference internal" href="#ooni.reporter.OSafeRepresenter" title="ooni.reporter.OSafeRepresenter"><code class="xref py py-class docutils literal"><span class="pre">ooni.reporter.OSafeRepresenter</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">yaml.resolver.Resolver</span></code></p>
+<p>This is a modification of the YAML Safe Dumper to use our own Safe
+Representer that supports complex numbers.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.OSafeRepresenter">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">OSafeRepresenter</code><span class="sig-paren">(</span><em>default_style=None</em>, <em>default_flow_style=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OSafeRepresenter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OSafeRepresenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">yaml.representer.SafeRepresenter</span></code></p>
+<p>This is a custom YAML representer that allows us to represent reports
+safely.
+It extends the SafeRepresenter to be able to also represent complex
+numbers and scapy packet.</p>
+<dl class="method">
+<dt id="ooni.reporter.OSafeRepresenter.represent_complex">
+<code class="descname">represent_complex</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OSafeRepresenter.represent_complex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.represent_complex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.OSafeRepresenter.represent_data">
+<code class="descname">represent_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#OSafeRepresenter.represent_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.represent_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is very hackish. There is for sure a better way either by using
+the add_multi_representer or add_representer, the issue though lies in
+the fact that Scapy packets are metaclasses that leads to
+yaml.representer.get_classobj_bases to not be able to properly get the
+base of class of a Scapy packet.
+XXX fully debug this problem</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.reporter.OSafeRepresenter.yaml_representers">
+<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;, &lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.Packet">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">Packet</code><a class="reference internal" href="../_modules/ooni/reporter.html#Packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.Report">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">Report</code><span class="sig-paren">(</span><em>test_details</em>, <em>report_filename</em>, <em>reportEntryManager</em>, <em>collector_client=None</em>, <em>no_njson=False</em>, <em>measurement_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ooni.reporter.Report.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the report by calling it&#8217;s finish method.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>a :class:twisted.internet.defer.DeferredList that will fire when
+all the reports have been closed.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.Report.generateReportFilename">
+<code class="descname">generateReportFilename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report.generateReportFilename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report.generateReportFilename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.Report.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report.open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>This will create all the reports that need to be created and fires the
+created callback of the reporter whose report got created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.Report.open_oonib_reporter">
+<code class="descname">open_oonib_reporter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report.open_oonib_reporter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report.open_oonib_reporter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.reporter.Report.reportId">
+<code class="descname">reportId</code><em class="property"> = None</em><a class="headerlink" href="#ooni.reporter.Report.reportId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.Report.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>measurement</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will return a deferred that will fire once the report for the specified
+measurement have been written to all the reporters.</p>
+<p>Args:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>measurement:</dt>
+<dd>an instance of :class:ooni.tasks.Measurement</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>a deferred that will fire once all the report entries have
+been written or errbacks when no more reporters</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.reporter.YAMLReporter">
+<em class="property">class </em><code class="descclassname">ooni.reporter.</code><code class="descname">YAMLReporter</code><span class="sig-paren">(</span><em>test_details</em>, <em>report_filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#YAMLReporter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.YAMLReporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ooni.reporter.OReporter" title="ooni.reporter.OReporter"><code class="xref py py-class docutils literal"><span class="pre">ooni.reporter.OReporter</span></code></a></p>
+<p>These are useful functions for reporting to YAML format.</p>
+<dl class="docutils">
+<dt>report_destination:</dt>
+<dd>the destination directory of the report</dd>
+</dl>
+<dl class="method">
+<dt id="ooni.reporter.YAMLReporter.createReport">
+<code class="descname">createReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#YAMLReporter.createReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.YAMLReporter.createReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the report header and fire callbacks on self.created</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.YAMLReporter.finish">
+<code class="descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#YAMLReporter.finish"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.YAMLReporter.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.reporter.YAMLReporter.writeReportEntry">
+<code class="descname">writeReportEntry</code><span class="sig-paren">(</span><em>entry</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#YAMLReporter.writeReportEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.YAMLReporter.writeReportEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ooni.reporter.createPacketReport">
+<code class="descclassname">ooni.reporter.</code><code class="descname">createPacketReport</code><span class="sig-paren">(</span><em>packet_list</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#createPacketReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.createPacketReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes as input a packet a list.</p>
+<p>Returns a dict containing a dict with the packet
+summary and the raw packet.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ooni.reporter.safe_dump">
+<code class="descclassname">ooni.reporter.</code><code class="descname">safe_dump</code><span class="sig-paren">(</span><em>data</em>, <em>stream=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#safe_dump"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.safe_dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safely dump to a yaml file the specified data.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
